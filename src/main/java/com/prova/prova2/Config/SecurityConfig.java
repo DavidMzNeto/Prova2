@@ -23,7 +23,7 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtAut
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
-
+//Cria a authenticação para o swagger
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
@@ -49,7 +49,6 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    // ✅ Adicione esta parte para resolver o erro
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
