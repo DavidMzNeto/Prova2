@@ -28,7 +28,6 @@ public OpenAPI customOpenAPI() {
             .description("Documentação da API de autenticação e usuários"));
 }
 
-    // (Opcional) agrupamento por pacotes:
     @Bean
     public GroupedOpenApi authApi() {
         return GroupedOpenApi.builder()
